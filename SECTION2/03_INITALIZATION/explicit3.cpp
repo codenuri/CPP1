@@ -1,19 +1,20 @@
 #include <memory>
+#include <vector>
+#include <string>
+#include <iostream>
 
 int main()
 {
-    // shared_ptr : C++ Ç¥ÁØ ½º¸¶Æ® Æ÷ÀÎÅÍ
+    std::string s1("hello"); // ok
+    std::string s2 = "hello"; //ok
     
+    std::vector<int> v1(10);  // ok
+    std::vector<int> v2 = 10; // error
+    std::vector<int> v3 = {10}; // ok
+    
+    // shared_ptr : C++ í‘œì¤€ ìŠ¤ë§ˆíŠ¸ í¬ì¸í„°
+ 
     std::shared_ptr<int> p1( new int ); // ok 
     std::shared_ptr<int> p2 = new int;  // error
     
-    
-    //string s1 = "aaa";
-    
-//    Stack s(10);
-//    Stack s = 10;
-    
-//    foo( 10 );
 }
-
-//void foo(Stack s) {}
